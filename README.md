@@ -44,6 +44,9 @@ sudo apt-get update&&sudo apt-get upgrade
 ```
 를 입력하여 모듈들을 업그레이드 한 뒤 위 명령어를 다시 실행해줍니다.
 
+# 배선
+<a href="https://luma-led-matrix.readthedocs.io/en/latest/install.html">영어 가이드</a>를 참고해주세요.
+
 # 전 단계에서 설치한 모듈 실행하기
 전 단계에서는 LED를 실행시키는 LumaLED 모듈, 같은 네트워크의 다른 기기에서도 LED를 이용할 수 있게 하는 FastAPI와 FastAPI의 서버를 운영시키는 Uvicorn을 설치했습니다.
 이제 해당 코드를 실행합니다.
@@ -51,5 +54,5 @@ sudo apt-get update&&sudo apt-get upgrade
 python3 -m uvicorn main:app --reload --host:0.0.0.0
 ```
 
-# LCDApp에서 실행하기
+# LCDApp에서 연동하기
 LCDApp에서는 Raspberry Pi의 내부 IP주소를 복사, 붙여넣기 해주시기 바랍니다. `http://`, `:8000`, `docs`와 같은 불필요한 접두사를 제외한 오로지 주소만을 입력하지 않으면 정상적인 연동이 불가능해집니다.
